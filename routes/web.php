@@ -33,3 +33,13 @@ Route::get('/editarProducto/{id}', 'ProductController@editar');
 Route::put('/editarProducto', 'ProductController@actualizar');
 
 Route::get('/borrarProducto/{id}', 'ProductController@borrar');
+
+Route::get('/buscador', 'ProductController@buscar');
+
+Route::get('/preguntas', function () {
+  return view('preguntas');
+});
+
+Route::get('/cart/{id}','ProductController@cart');
+
+Route::get('/carrito','ProductController@carrito');

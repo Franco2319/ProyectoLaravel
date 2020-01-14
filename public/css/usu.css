@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body {
+  max-width: 2048px;
+  background-color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+h1{
+color: #996515;
+font-size: 50px;
+}
+
+.inputbuscador {
+  position: relative;
+  bottom: 0.7px;
+  left: -1px;
+  height: 7vh;
+
+}
+
+.buttonlupita {
+  position: relative;
+  left: -1.5px;
+  bottom: 51px;
+  height: 7vh;
+  width: 3.3vw;
+}
+
+.carritoli {
+  position: relative;
+  margin-left: 44px;
+  left: 1px;
+  bottom: 1.5px;
+
+}
+
+.preguntasli {
+  position: relative;
+  left: 0.5px;
+    bottom: 1.5px;
+}
+
+.escorpioncito {
+  position: relative;
+  left: 47.8px;
+  bottom: 2.5px;
+  width: 8.8vw;
+  height: 17.8vh;
+}
+
+.divusuario {
+  position: relative;
+  left: 50px;
+  top: 2px;
+}
+
+.navcontainer {
+background-color:	#996515;
+height: 22.5vh;
+}
+
+.IDIV{
+margin-right: 41%;
+margin-top: 49px;
+}
+
+.ILI  {
+width: 212.8%;
+padding-right: 20%;
+
+}
+
+.display-4{
+  font-size: 1.5rem;
+}
+
+
+
+
+.paginate {
+  margin-top: 5%;
+}
+
+.carritoli{
+  margin-top: 5.5%;
+}
+.preguntasli{
+  margin-top: 5.5%;
+  margin-left: 3%;
+}
+.preguntasli a{
+  color: black;
+}
+.carritoi{
+  font-size: 1.5rem;
+}
+.preguntasi{
+  font-size: 1.5rem;
+}
+.divmayor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.imagelogo {
+  margin-left: 8%;
+  margin-right: 5%;
+}
+
+
+/* FOTEEEEEEEEEEER */
+
+footer {
+  color: white;
+  margin-top: 1%;
+}
+
+/* TERMINA EL FOTEEEEEEEEER */
+
+
+/* PAGINA PREGUNTAS FRECUENTES */
+.seccionpreguntas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preguntas {
+  width: 50%;
+  border: solid black 3px;
+  margin-bottom: 1%;
+  padding: 1%;
+  background-image: url("../images/bg2.png");
+}
+
+.preguntagrande {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.preguntas:hover {
+  color: #F0F8FF;
+  background-image: url("../images/bg3.png");
+}
+/* PAGINA PREGUNTAS FRECUENTES */
+
+
+/* ESTO ES EL BOOTSTRAP DEL BUSCADOR COMIENZO*/
+
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav .search-container {
+  float: right;
+  margin-top: 7%;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: solid 1px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.finalizarcompra{
+  margin-top: 4%;
+  font-size: x-large;
+}
+/* @media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+} */
+
+/* ESTO ES EL BOOTSTRAP DEL BUSCADOR FIN */
+
+/* BOTON DEL CARRITO */
+
+.button {
+  width: 23%;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  margin-bottom: 1%;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #6351ce, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button:hover::before {
+  --size: 400px;
+}
+
+.aboton{
+  color: white;
+}
+
+/* BOTON DEL CARRITO */
+
+
+@media  (max-width: 425px){
+
+
+  .inputbuscador {
+    width: 50%;
+    left: auto;
+    right: 12px;
+    bottom: 15px;
+    top: auto;
+  }
+  .buttonlupita{
+    left: auto;
+    right: 65px;
+    top: auto;
+    bottom: 15px;
+  }
+
+  .topnav {
+    position: absolute;
+    width: 50%;
+  }
+
+  .carritoli{
+    left: auto;
+    right: 39px;
+    bottom: -37px;
+    top: auto;
+  }
+  .preguntasli{
+    left: auto;
+    right: 38px;
+    bottom: -37px;
+    top: auto;
+  }
+
+  .iniciarsesion{
+    position: relative;
+    left: 17px;
+    right: auto;
+    bottom: auto;
+    top: auto;
+
+  }
+
+  .crearcuenta{
+    position: relative;
+    left: 83px;
+    right: auto;
+    bottom: 62px;
+    top: auto;
+
+  }
+
+
+  .escorpioncito{
+    width: 25.5vw;
+    position: relative;
+    left: 14px;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+  .divusuario{
+    left: 18px;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+}

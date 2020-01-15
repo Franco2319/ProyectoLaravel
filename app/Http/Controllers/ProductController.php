@@ -9,9 +9,9 @@ use Session;
 
 class ProductController extends Controller
 {
-    function products(){
-      $productos = Product::paginate(4);
-      return view('index',compact('productos'));
+    function index(){
+      // $productos = Product::paginate(4);
+      return view('index');
     }
 
     function detalle($id){
@@ -32,6 +32,7 @@ class ProductController extends Controller
         'price' => 'required|numeric',
         'description' => 'max:255',
         'image' => 'required|file|image',
+        'category' => 'max:255',
       ];
       // $mensajes = [];
 
@@ -45,6 +46,7 @@ class ProductController extends Controller
       $productoNuevo->price = $datos['price'];
       $productoNuevo->description = $datos['description'];
       $productoNuevo->image = $imagen;
+      $productoNuevo->category = $datos['category'];
 
       $productoNuevo->save();
 
@@ -58,6 +60,7 @@ class ProductController extends Controller
         'precio' => 'required|decimal',
         'descripcion' => 'max:255',
         'foto' => 'required|file|image',
+        'category' => 'max:255',
       ];
       // $mensajes = [];
 
@@ -72,6 +75,7 @@ class ProductController extends Controller
       $productoEditado->price = $datos['precio'];
       $productoEditado->description = $datos['descripcion'];
       $productoEditado->image = $imagen;
+      $productoEditado->category = $datos['category'];
 
       $productoEditado->save();
 
@@ -91,9 +95,9 @@ class ProductController extends Controller
 
     public function buscar(Request $request){
     $search = $request->input( 'search' );
-    $productos = Product::where('name','LIKE','%'.$search.'%')->orWhere('price','LIKE','%'.$search.'%')->paginate(3);
+    $productos = Product::where('name','LIKE','%'.$search.'%')->orWhere('price','LIKE','%'.$search.'%')->paginate(100);
     if(count($productos) > 0)
-    return view('index',compact('productos'));
+    return view('lista',compact('productos'));
     else
     return view('mensajeerror');
     }
@@ -118,4 +122,26 @@ class ProductController extends Controller
       $productos = Product::find($productos);
       return view('cart', compact('productos'));
     }
+
+    public function jeans(){
+     $productos = Product::all()->where('category','JN');
+     return view('lista',compact('productos'));
+    }
+
+    public function remeras(){
+     $productos = Product::all()->where('category','RM');
+     return view('lista',compact('productos'));
+    }
+
+    public function calzados(){
+     $productos = Product::all()->where('category','CL');
+     return view('lista',compact('productos'));
+    }
+
+    public function buzos(){
+     $productos = Product::all()->where('category','BZ');
+     return view('lista',compact('productos'));
+    }
+
+
 }

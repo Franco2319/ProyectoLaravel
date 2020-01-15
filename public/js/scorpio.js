@@ -1,21 +1,12 @@
 ﻿window.onload = function(){
-   document.querySelector('.button').onmousemove = function (e) {
-
-  	var x = e.pageX - e.target.offsetLeft;
-  	var y = e.pageY - e.target.offsetTop;
-
-  	e.target.style.setProperty('--x', x + 'px');
-  	e.target.style.setProperty('--y', y + 'px');
-  };
-
-  let formulario = document.forms[0];
+  let formulario = document.forms[1];
   // let elementos = formulario.elements;
   let elementos = document.querySelectorAll('input');
-  let inputNombre = elementos[1];
+  let inputNombre = elementos[3];
   // let inputApellido = elementos[2];
-  let inputEmail = elementos[2];
-  let inputContra = elementos[3];
-  let inputConfirm = elementos[4];
+  let inputEmail = elementos[4];
+  let inputContra = elementos[5];
+  let inputConfirm = elementos[6];
   // Hace referencia a los p debajo de los imputs
   // console.log(elementos);
   let errorNombr = document.getElementById('errorNomb');
@@ -27,14 +18,14 @@
   let emailRegex = (/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/);
   let contraRegex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
-  formulario.onsubmit = function(evento){
-    for (elemento of elementos) {
-      if (elemento.getAttribute('class') != 'form-control is-valid') {
-        evento.preventDefault();
-      }
-    }
-    formulario.submit;
-  }
+  // formulario.onsubmit = function(evento){
+  //   for (elemento of elementos) {
+  //     if (elemento.getAttribute('class') != 'form-control is-valid') {
+  //       evento.preventDefault();
+  //     }
+  //   }
+  //   formulario.submit;
+  // }
 
   inputNombre.onchange = function (){
     if (inputNombre.value.length <= 1) {
@@ -95,4 +86,29 @@
       errorContra.appendChild(mensajeConf);
     }
   }
+
+
+  // API
+
+  // var divpais = document.getElementById('divpais');
+  // fetch("https://apis.datos.gob.ar/georef/api/provincias")
+  //  .then(function(datos){
+  //   return datos.json();
+  //  })
+  //  .then(function(objetopais){
+  //     var selectpais = document.createElement('select');
+  //     selectpais.name = "Pais";
+  //     selectpais.id = "selectpais";
+  //     divpais.appendChild(selectpais);
+  //     for (pais of objetopais.provincias) {
+  //       var optionpais = document.createElement('option');
+  //       var nompais = document.createTextNode(pais.nombre);
+  //       optionpais.setAttribute('value',pais.id);
+  //       optionpais.setAttribute('class','form-control');
+  //       optionpais.appendChild(nompais);
+  //       selectpais.appendChild(optionpais);
+  //     }
+  //  });
+
+
 }

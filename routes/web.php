@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/index','ProductController@products');
+Route::get('/index','ProductController@index');
 
 Route::get('/addProduct', function () {
     return view('admin.addproduct');
@@ -43,3 +43,11 @@ Route::get('/preguntas', function () {
 Route::get('/cart/{id}','ProductController@cart');
 
 Route::get('/carrito','ProductController@carrito');
+
+Route::get('/jeans','ProductController@jeans');
+
+Route::get('/remeras','ProductController@remeras');
+
+Route::get('/calzados','ProductController@calzados');
+
+Route::get('/buzos','ProductController@buzos');

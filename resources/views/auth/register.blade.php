@@ -17,11 +17,12 @@
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('name')
+                            <p id="errorNomb"></p>
+                                <!-- @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 
@@ -31,11 +32,12 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
+                                <p id="errorEm"></p>
+                                <!-- @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 
@@ -45,11 +47,12 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
+                                <p id="errorCon"></p>
+                                <!-- @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 
@@ -58,8 +61,19 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <p id="errorConCon"></p>
                             </div>
                         </div>
+
+
+                         <!-- API -->
+
+                        <!-- <div class="form-group row">
+                        <label for="Pais" class="col-md-4 col-form-label text-md-right">Paises</label>
+                        <div class="col-md-6" id="divpais">
+
+                          </div>
+                      </div> -->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -74,4 +88,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/scorpio.js') }}" type="text/javascript"></script>
 @endsection

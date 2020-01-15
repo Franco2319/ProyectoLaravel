@@ -69,11 +69,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item iniciarsesion">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
+                                <a class="nav-link text-dark" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item crearcuenta">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Crear Cuenta') }}</a>
+                                    <a class="nav-link text-dark" href="{{ route('register') }}">{{ __('Crear Cuenta') }}</a>
                                 </li>
                             @endif
                         @else
@@ -261,7 +261,7 @@
 
 </footer>
 <!-- Footer -->
-<script src="{{ asset('js/scorpio.js') }}" type="text/javascript"></script>
+
 
 </body>
 </html>

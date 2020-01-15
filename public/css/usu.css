@@ -17,37 +17,32 @@ font-size: 50px;
 
 .inputbuscador {
   position: relative;
-  bottom: 0.7px;
+  top: 15px;
   left: -1px;
-  height: 7vh;
 
 }
 
 .buttonlupita {
   position: relative;
   left: -1.5px;
-  bottom: 51px;
-  height: 7vh;
+  top: 15px;
   width: 3.3vw;
 }
 
 .carritoli {
   position: relative;
   margin-left: 44px;
-  left: 1px;
-  bottom: 1.5px;
-
+  left: 10px;
 }
 
 .preguntasli {
   position: relative;
-  left: 0.5px;
-    bottom: 1.5px;
+  left: 10px;
 }
 
 .escorpioncito {
   position: relative;
-  left: 47.8px;
+  left: 60px;
   bottom: 2.5px;
   width: 8.8vw;
   height: 17.8vh;
@@ -55,8 +50,8 @@ font-size: 50px;
 
 .divusuario {
   position: relative;
-  left: 50px;
-  top: 2px;
+  left: 130px;
+  top: 30px;
 }
 
 .navcontainer {
@@ -64,27 +59,10 @@ background-color:	#996515;
 height: 22.5vh;
 }
 
-.IDIV{
-margin-right: 41%;
-margin-top: 49px;
+.vermas {
+  color: #996515;
 }
 
-.ILI  {
-width: 212.8%;
-padding-right: 20%;
-
-}
-
-.display-4{
-  font-size: 1.5rem;
-}
-
-
-
-
-.paginate {
-  margin-top: 5%;
-}
 
 .carritoli{
   margin-top: 5.5%;
@@ -94,6 +72,9 @@ padding-right: 20%;
   margin-left: 3%;
 }
 .preguntasli a{
+  color: black;
+}
+.carritoli a{
   color: black;
 }
 .carritoi{

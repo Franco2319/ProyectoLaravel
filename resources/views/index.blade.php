@@ -32,7 +32,7 @@
 <br>
 <br>
 
-<h1 class="text-center">
+<h1 class="text-center text-white">
       Viviendo la marca del Rock
 </h1>
 
@@ -72,58 +72,3 @@
 </div>
 
 @endsection
-
-
-
-
-
-
-
-
-
-<!-- <div class="container py-5">
-
-  <div class="row text-center text-white mb-5">
-    <div class="col-lg-7 mx-auto">
-      <h1 class="display-4 h1-1">Productos</h1>
-    </div>
-  </div>
-
-
-  <div class="row IDIV">
-
-    <div class="col-lg-8 mx-auto">
-
-
-      <ul class="list-group">
-
-@foreach ($productos as $producto)
-
-        <li class="list-group-item ILI">
-
-          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-            <div class="media-body order-2 order-lg-1">
-              <h5 class="mt-0 font-weight-bold mb-2">{{$producto->name}}</h5>
-
-              <div class="d-flex align-items-center justify-content-between mt-1">
-               <div class="">
-                 <h6 class="font-weight-bold my-2">{{$producto->price}}</h6>
-               </div>
-              <div class="">
-                <ul class="list-inline small">
-                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
-                  <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
-                </ul>
-              </div>
-
-
-              </div>
-              <p> <a href="/detalleProducto/{{$producto->id}}">Ver Mas</a> </p>
-            </div><img src="/storage/{{$producto->image}}" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-          </div>
-        </li>
-@endforeach
-    {{$productos->links()}} -->

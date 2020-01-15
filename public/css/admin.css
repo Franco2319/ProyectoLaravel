@@ -72,23 +72,9 @@ height: 22.5vh;
 background-color: #996515;
 }
 
-
-.IDIV{
-margin-right: 41%;
-margin-top: 40px;
+.vermas {
+  color: #996515;
 }
-
-.ILI  {
-width: 212.8%;
-padding-right: 20%;
-
-}
-
-.display-4{
-  font-size: 1.5rem;
-}
-
-
 
 
 .paginate {
@@ -103,6 +89,9 @@ padding-right: 20%;
   margin-left: 3%;
 }
 .preguntasli a{
+  color: black;
+}
+.carritoli a{
   color: black;
 }
 .carritoi{

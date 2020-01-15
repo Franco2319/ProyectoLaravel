@@ -5,7 +5,7 @@
 @if ($productos)
 <div class="row text-center text-white mb-5">
   <div class="col-lg-7 mx-auto">
-    <h1 class="display-4 h1">¿Compras?</h1>
+    <h1 class="display-4 h1">¿Comprás?</h1>
   </div>
 </div>
 

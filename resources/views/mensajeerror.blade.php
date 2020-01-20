@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>NO SE ENCUENTRA EL PRODUCTO SELECCIONADO LA REONCHCA D ETU MASDRE SAKFJSAKFKSA</h1>
+<h1>No se encontro ningún producto con esas características</h1>
 
 
 @endsection

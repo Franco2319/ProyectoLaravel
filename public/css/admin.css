@@ -15,48 +15,50 @@ color: #996515;
 font-size: 50px;
 }
 
+.titulopagina {
+  font-family: 'Fjalla One', sans-serif;
+}
 .inputbuscador {
   position: relative;
-  right: 52px;
-  bottom: 7px;
-  height: 7vh;
+  right: 54px;
+  top: 11px;
+  height: 6.2vh;
   width: 21.1vw;
 }
 
 .buttonlupita {
   position: relative;
-  left: -57px;
-  right: 2px;
-  bottom: 7px;
-  height: 7vh;
+  right: 59px;
+  top: 11px;
+  height: 6.2vh;
   width: 3.3vw;
    }
 
    .carritoli {
      position: relative;
-     right: 55.5px;
-     bottom: 10px;
+     right: 56.5px;
+     top: 1px;
      margin-left: 45px;
    }
 
    .preguntasli {
      position: relative;
-     right: 59px;
-     bottom: 10px;
+     right: 60px;
+     top: 1px;
    }
 
 .escorpioncito {
   position: relative;
-  width: 8.7vw;
-  left: -20px;
-  bottom: 5px;
-  right: 67px;
+  height: 17.8vh;
+  width: 8.9vw;
+  bottom: 4px;
+  right: 24px;
 }
 
 .divusuario {
   position: relative;
-  right: 13px;
-  bottom: 1px;
+  left: 10px;
+  top: 40px;
 
 
 }
@@ -72,10 +74,50 @@ height: 22.5vh;
 background-color: #996515;
 }
 
-.vermas {
-  color: #996515;
+.articuloindex {
+  -webkit-animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.articuloindex {
+  font-family: 'Fjalla One', sans-serif;
+}
+.articuloindex h2{
+  color: white;
 }
 
+.articuloindex:hover {
+  background-image: url("../images/bg2.png");
+
+}
+
+.articuloindex:hover h2{
+  color: black;
+}
+
+.articuloindex:hover .vermas {
+  background-color: white;
+  border: solid black 1px;
+}
+
+.vermas {
+  color: #996515;
+  background-color: black;
+  width: 40%;
+  border: solid white 1px;
+  border-radius: 10px;
+}
+
+.añadircarrito {
+  color: #996515;
+  background-color: black;
+  padding: 0.5%;
+  font-size: 1rem;
+  border: solid white 1px;
+  border-radius: 10px;
+}
 
 .paginate {
   margin-top: 5%;
@@ -132,8 +174,11 @@ footer {
 }
 
 .preguntas {
+  font-family: 'Fjalla One', sans-serif;
   width: 50%;
   border: solid black 3px;
+  border-radius: 62px;
+  margin: auto;
   margin-bottom: 1%;
   padding: 1%;
   background-image: url("../images/bg2.png");
@@ -147,6 +192,28 @@ footer {
 .preguntas:hover {
   color: #F0F8FF;
   background-image: url("../images/bg3.png");
+}
+
+.medios{
+  font-family: 'Fjalla One', sans-serif;
+  width: 50%;
+  background-image: url("../images/bg2.png");
+  margin: auto;
+  border: solid black 3px;
+  border-radius: 62px;
+  padding: 1%;
+}
+.medios:hover{
+  color: #F0F8FF;
+  background-image: url("../images/bg3.png");
+}
+.medios h4{
+  font-weight: bold;
+  font-size: 150%;
+  padding-bottom: 1%;
+}
+.medios img{
+  width: 6.5%;
 }
 /* PAGINA PREGUNTAS FRECUENTES */
 
@@ -210,65 +277,93 @@ footer {
 
 /* BOTON DEL CARRITO */
 
-.button {
-  width: 23%;
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  margin-bottom: 1%;
-  border: none;
-  color: white;
-  font-size: 1.5em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 100px;
-}
-.button span {
-  position: relative;
-  pointer-events: none;
-}
-.button::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #6351ce, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease;
-}
-.button:hover::before {
-  --size: 400px;
-}
 
 .aboton{
+  color: white;
+  color: #996515;
+  padding: 1%;
+  background-color: black;
+  border: solid white 1px;
+  border-radius: 10px;
+}
+
+.aboton:hover {
   color: white;
 }
 
 /* BOTON DEL CARRITO */
 
+@media  (max-width: 768px){
+
+  .inputbuscador {
+    left: auto;
+    right: 145px;
+    bottom: auto;
+    top: auto;
+    width: 21.2vw;
+    height: 7.2vh;
+  }
+  .buttonlupita{
+    left: auto;
+    right: 146px;
+    width: 5vw;
+    top: auto;
+    bottom: auto;
+    height: 7.2vh;
+  }
+
+  .topnav {
+    position: absolute;
+  }
+
+  .carritoli{
+    left: 180px;
+    right: auto;
+    bottom: auto;
+    top: 17px;
+  }
+  .preguntasli{
+    left: 180.5px;
+    right: auto;
+    bottom: auto;
+    top: 17px;
+  }
+
+
+  .escorpioncito{
+    left: 192px;
+    right: auto;
+    width: 14.1vw;
+    top: auto;
+    bottom: 5px;
+  }
+
+  .divusuario{
+    left: 263px;
+    right: auto;
+    top: 20px;
+    bottom: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
 @media  (max-width: 425px){
 
 
   .inputbuscador {
-    width: 50%;
+    width: 25vw;
     left: auto;
-    right: 12px;
-    bottom: 15px;
+    right: 35px;
+    bottom: 5px;
     top: auto;
   }
   .buttonlupita{
+    width: 9vw;
     left: auto;
-    right: 65px;
+    right: 36px;
     top: auto;
-    bottom: 15px;
+    bottom: 5px;
   }
 
   .topnav {
@@ -279,14 +374,14 @@ footer {
   .carritoli{
     left: auto;
     right: 40px;
-    bottom: -34px;
-    top: auto;
+    bottom: auto;
+    top: 49px;
   }
   .preguntasli{
     left: auto;
     right: 40.5px;
-    bottom: -34px;
-    top: auto;
+    bottom: auto;
+    top: 49px;
   }
 
   .iniciarsesion{
@@ -309,16 +404,16 @@ footer {
 
 
   .escorpioncito{
-    width: 25.5vw;
-    left: 8.2px;
+    width: 22.1vw;
+    left: 18px;
     right: auto;
     top: auto;
     bottom: auto;
   }
   .divusuario{
-    left: 10px;;
+    left: 38px;
     right: auto;
-    top: auto;
+    top: 27px;
     bottom: auto;
     padding-right: 0;
     padding-left: 0;

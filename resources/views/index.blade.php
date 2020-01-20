@@ -32,7 +32,7 @@
 <br>
 <br>
 
-<h1 class="text-center text-white">
+<h1 class="text-center text-white titulopagina">
       Viviendo la marca del Rock
 </h1>
 

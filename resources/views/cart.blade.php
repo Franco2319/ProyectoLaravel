@@ -23,7 +23,7 @@
  </div>
 @endforeach
   <div class="d-flex flex-row bd-highlight mb-3 finalizarcompra button">
-    <a href="" name="button" class="aboton">Finalizar Compra</a>
+    <a href="#finalizarcompra" name="button" class="aboton" id="finalizar">Finalizar Compra</a>
   </div>
 @else
 <div class="row text-center text-white mb-5">
@@ -37,5 +37,5 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 @endsection

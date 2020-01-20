@@ -1,7 +1,8 @@
 ﻿window.onload = function(){
-  let formulario = document.forms[1];
+  let formulario = document.getElementById('formregistro');
   // let elementos = formulario.elements;
   let elementos = document.querySelectorAll('input');
+  console.log(elementos);
   let inputNombre = elementos[3];
   // let inputApellido = elementos[2];
   let inputEmail = elementos[4];
@@ -18,20 +19,21 @@
   let emailRegex = (/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/);
   let contraRegex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
-  // formulario.onsubmit = function(evento){
-  //   for (elemento of elementos) {
-  //     if (elemento.getAttribute('class') != 'form-control is-valid') {
-  //       evento.preventDefault();
-  //     }
-  //   }
-  //   formulario.submit;
-  // }
+  formulario.onsumbit = function(evento){
+    if (inputNombre.getAttribute('class')!= 'form-control is-valid' && inputEmail.getAttribute('class')!= 'form-control is-valid' && inputContra.getAttribute('class')!= 'form-control is-valid' && inputConfirm.getAttribute('class')!= 'form-control is-valid') {
+        evento.preventDefault();
+    }
+    formulario.submit;
+  }
+
 
   inputNombre.onchange = function (){
     if (inputNombre.value.length <= 1) {
-      inputNombre.setAttribute('class', 'form-control is-invalid');
-      var mensajeNomb = document.createTextNode("Tu nombre es invalido");
-      errorNombr.appendChild(mensajeNomb);
+      if (errorNombr.textContent=="") {
+        inputNombre.setAttribute('class', 'form-control is-invalid');
+        var mensajeNomb = document.createTextNode("Tu nombre es invalido");
+        errorNombr.appendChild(mensajeNomb);
+      }
     } else {
       inputNombre.setAttribute('class', 'form-control is-valid');
       var mensajeNomb = document.createTextNode("");
@@ -39,23 +41,14 @@
     }
   }
 
-  // inputApellido.onchange = function (){
-  //   if (inputApellido.value.length <= 1) {
-  //     inputApellido.setAttribute('class', 'form-control is-invalid');
-  //     var mensajeAp = document.createTextNode("Tu apellido es invalido");
-  //     errorAp.appendChild(mensajeAp);
-  //   } else {
-  //     inputApellido.setAttribute('class', 'form-control is-valid');
-  //     var mensajeAp = document.createTextNode("");
-  //     errorAp.appendChild(mensajeAp);
-  //   }
-  // }
-
   inputEmail.onkeyup = function(){
     if (emailRegex.test(inputEmail.value) == false) {
-      inputEmail.setAttribute('class', 'form-control is-invalid');
-      var mensajeEm = document.createTextNode("Tu email es invalido");
-      errorEm.appendChild(mensajeEm);
+      if (errorEm.textContent=="") {
+        inputEmail.setAttribute('class', 'form-control is-invalid');
+        var mensajeEm = document.createTextNode("Tu email es invalido");
+        errorEm.appendChild(mensajeEm);
+      }
+
     } else {
       inputEmail.setAttribute('class', 'form-control is-valid');
       var mensajeEm = document.createTextNode("");
@@ -65,9 +58,11 @@
 
   inputContra.onchange = function(){
     if (contraRegex.test(inputContra.value) == false) {
-      inputContra.setAttribute('class', 'form-control is-invalid');
-      var mensajeCon = document.createTextNode("Tu contraseña es invalida");
-      errorContra.appendChild(mensajeCon);
+      if (errorContra.textContent=="") {
+        inputContra.setAttribute('class', 'form-control is-invalid');
+        var mensajeCon = document.createTextNode("Tu contraseña es invalida");
+        errorContra.appendChild(mensajeCon);
+      }
     } else {
       inputContra.setAttribute('class', 'form-control is-valid');
       var mensajeCon = document.createTextNode("");
@@ -77,9 +72,11 @@
 
   inputConfirm.onchange = function(){
     if (inputContra.value != inputConfirm.value) {
-      inputConfirm.setAttribute('class', 'form-control is-invalid');
-      var mensajeConf = document.createTextNode("Las contraseñas no coinciden");
-      errorConfirm.appendChild(mensajeConf);
+      if (errorConfirm.textContent=="") {
+        inputConfirm.setAttribute('class', 'form-control is-invalid');
+        var mensajeConf = document.createTextNode("Las contraseñas no coinciden");
+        errorConfirm.appendChild(mensajeConf);
+      }
     } else {
       inputConfirm.setAttribute('class', 'form-control is-valid');
       var mensajeConf = document.createTextNode("");

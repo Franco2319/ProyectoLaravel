@@ -3,9 +3,9 @@
 @section('content')
 
 
-<div class="row">
+<div class="col">
   <div class="col text-center">
-    <img src="/storage/{{$productos->image}}" alt="">
+    <img src="/storage/{{$productos->image}}" class="border border-danger rounded-lg" width="400" alt="">
   </div>
   <div class="col text-center text-white pt-5">
     <h2>{{$productos->name}}</h2>
@@ -20,39 +20,23 @@
       <option value="">XL</option>
     </select>
     <br>
+    <br>
     @if (Auth::user())
-     <a href="/cart/{{$productos->id}}" name="button">Comprar</a>
+     <a href="/cart/{{$productos->id}}" name="button" class="añadircarrito">Añadir al Carrito</a>
      @else
-     <a href="/login" name="button">Comprar</a>
+     <a href="/login" name="button" class="añadircarrito">Añadir al Carrito</a>
     @endif
+    <br>
+    <br>
     @if (Auth::user())
     @if (Auth::user()->rol == 9)
     <a href="/editarProducto/{{$productos->id}}"> Editar Producto </a>
+    <br>
     <a href="/borrarProducto/{{$productos->id}}"> Borrar Producto </a>
     @endif
    @endif
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

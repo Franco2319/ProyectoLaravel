@@ -15,6 +15,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -34,6 +35,7 @@
 
               <div class="col-md-6 col-sm-2 topnav">
                    <div class="search-container">
+
      <!--                               EMPIEZA EL BUSCADOR                                          -->
                      <form action="/buscador">
                        {{ csrf_field() }}
@@ -42,6 +44,7 @@
                      </form>
                    </div>
                  </div>
+
              @if (Auth::user())
              <div class="carritoli"><a href="/carrito"><i class="fas fa-cart-plus carritoi"></i></a></div>
              @else
@@ -86,7 +89,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Cerrar Sesión') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -262,6 +265,6 @@
 </footer>
 <!-- Footer -->
 
-
+<script src="{{ asset('js/finalizar.js') }}" defer></script>
 </body>
 </html>
